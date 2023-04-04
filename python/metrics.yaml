@@ -1,0 +1,38 @@
+---
+$schema: moz://mozilla.org/schemas/glean/metrics/2-0-0
+
+info:
+  started:
+    type: datetime
+    description: |
+      Time when the app was started
+    time_unit: second
+    send_in_pings:
+      - baseline
+      - events
+    bugs:
+      - TODO
+    data_reviews:
+      - TODO
+    notification_emails:
+      - todo@mozilla.com
+    expires: never
+
+experiments:
+  enrolled:
+    type: event
+    description: |
+      Client enrolled
+    send_in_pings:
+      - events
+    bugs:
+      - TODO
+    data_reviews:
+      - TODO
+    notification_emails:
+      - todo@mozilla.com
+    expires: never
+    extra_keys:
+      id:
+        description: An id
+        type: string

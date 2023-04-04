@@ -1,2 +1,11 @@
 pip-compile: 
   pip-compile -o requirements.txt pyproject.toml
+
+setup:
+  test -d .venv || python3 -m venv .venv
+  .venv/bin/pip install pip-tools
+  just pip-compile
+  .venv/bin/pip-sync
+
+run:
+  .venv/bin/python3 -m glean-sample
