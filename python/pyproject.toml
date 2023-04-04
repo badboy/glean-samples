@@ -1,0 +1,6 @@
+[project]
+name = "glean-sample"
+version = "0.0.1"
+dependencies = [
+  "glean-sdk>=52.0.0"
+]
